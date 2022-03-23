@@ -1,0 +1,93 @@
+@use "global" as *;
+
+
+
+.swiper-slider2-button-prev,
+.swiper-slider2-button-next {
+ /*  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(../images/works/left-button.png); 
+  background-repeat: no-repeat;
+  outline: none */
+
+
+}
+
+.slider2 .swiper-button-pre:after,
+.slider2 .swiper-button-next:after {
+  /* content: ''; */
+}
+
+@media (max-width:900px) {
+  .swiper-slider2-button-prev,
+  .swiper-slider2-button-next
+  {
+    /* display:none; */
+  }
+}
+
+// ページネーション
+.swiper-pagination {
+  /* position: absolute; */
+  text-align: center;
+  text-align: center;
+  transition: 300ms opacity;
+  transform: translate3d(0, 0, 0);
+  z-index: 10;
+}
+
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  border-radius: 100%;
+  background: #dbdbdb;
+  outline: none;
+  margin-right: 40px;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #333;
+}
+
+
+
+
+.swiper-slider2-container {
+  position: relative;
+  width: 100%;
+  padding-top: 20px;
+  img {
+    width: 100%;
+  }
+}
+
+.swiper-slider2-button-prev {
+  left:-50px;
+}
+.swiper-slider2-button-next {
+  right: -50px;
+  transform: scale(-1, 1);
+}
+
+.slider2-pagenation-wrapper {
+  position: relative;
+  padding-top: 20px;
+  margin-left: 30px;
+}
+
+@media (max-width: 900px) {
+  .swiper-slider2-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+

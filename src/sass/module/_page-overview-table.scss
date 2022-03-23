@@ -1,0 +1,40 @@
+@use "global" as *;
+
+.page-overview-table {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include mq("md") {
+    font-size: rem(13);
+  }
+}
+
+.page-overview-table__team {
+  font-size: rem(13);
+  color: #fff;
+  padding-top: rem(11);
+  padding-bottom: rem(11);
+  border-bottom: #fff 1px solid;
+  width: 20%;
+  
+  @include mq("md") {
+    width: 12%;
+  }
+}
+
+
+.page-overview-table__description {
+  font-size: rem(13);
+  letter-spacing: rem(0);
+  line-height: 1.5;
+  color: #fff;
+  padding-top: rem(11);
+  padding-bottom: rem(24);
+  border-bottom: #fff 1px solid;
+  width: 80%;
+  
+  @include mq("md") {
+    line-height: 1.8;
+    width: 88%;
+  } 
+}

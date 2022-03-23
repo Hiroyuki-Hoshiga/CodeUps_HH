@@ -1,0 +1,111 @@
+@use "global" as *;
+
+.gallery {
+  width: 100%;
+  max-width: 800px;
+  margin: 40px auto;
+  
+  //メイン
+  &-slider {
+      width: 100%;
+      height: auto;
+      margin: 0 0 10px 0;
+
+      .swiper-slide {
+          width: auto;
+          height: auto;
+          
+          img {
+              display: block;
+              width: auto;
+              height: auto;
+              margin: 0 auto;
+          }
+      }
+  }
+  
+  //サムネイル
+  &-thumbs {
+      width: 100%;
+      padding: 0;
+      overflow: hidden;
+      .swiper-slide {
+          width: 93px;
+          height: 93px;
+          text-align: center;
+          overflow: hidden;
+          
+          &-active {
+            opacity: 1;
+          }
+          
+          img {
+            width: auto;
+            height: 100%;
+            object-fit: cover;
+          }
+      }
+
+  }
+}
+
+
+.swiper-gallery-button-prev,
+.swiper-gallery-button-next {
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(../images/works/left-button.png); 
+  background-repeat: no-repeat;
+  outline: none
+
+
+}
+
+.gallery-slider .swiper-button-prev:after,
+.gallery-slider .swiper-button-next:after {
+  content: '';
+}
+
+@media (max-width:900px) {
+  .swiper-slider2-button-prev,
+  .swiper-slider2-button-next
+  {
+    /* display:none; */
+  }
+}
+
+.swiper-gallery-container {
+  position: relative;
+  width: 100%;
+  padding-top: 20px;
+  img {
+    width: 100%;
+  }
+}
+
+.swiper-gallery-button-prev {
+  left:20px;
+}
+.swiper-gallery-button-next {
+  right: 20px;
+  transform: scale(-1, 1);
+}
+
+@media (max-width: 900px) {
+  .swiper-gallery-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+.swiper-container.gallery-thumbs {
+  margin-top:  50px;
+  
+}

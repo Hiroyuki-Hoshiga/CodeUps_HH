@@ -1,0 +1,42 @@
+@use "global" as *;
+
+.blog-card-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 600px;
+  margin: 0 auto;
+  
+  @include mq("md") {
+    flex-direction: row;
+    max-width: 1150px;
+  }
+}
+
+.blog-card-list__item {
+  
+  @include mq("md") {
+    max-width: 100%;
+    max-width: calc(100% / 3 - 3.125rem / 3);
+  }
+}
+.blog-card-list__item + .blog-card-list__item 
+{
+  margin-top: rem(25);
+  @include mq("md") {
+    margin-top: initial;
+    margin-left: rem(25);
+  }
+}
+.blog-card-list__item:nth-child(3n + 1) {
+
+  @include mq("md") {
+    margin-left: initial;
+  }
+}
+.blog-card-list__item:nth-child(n + 4) {
+  
+  @include mq("md") {
+    margin-top: rem(25);
+  }
+}

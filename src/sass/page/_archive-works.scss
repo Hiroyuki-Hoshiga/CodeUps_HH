@@ -1,0 +1,36 @@
+@use "global" as *;
+
+.archive-works {
+  background-color: #111;
+}
+
+.archive-works__mv {
+  background-image: url(../images/works/archive-works-mv.jpg);
+  background-size: cover; 
+  background-position: center center;
+  background-repeat: no-repeat;
+  
+  @include mq("md") {
+    background-image: url(../images/works/archive-works-mv-PC.jpg);
+  }
+}
+
+.archive-works__inner {
+
+}
+.archive-works__breadcrumbs {
+  margin-top: rem(24);
+}
+
+.archive-works__category-tabs {
+  margin-top: rem(24);
+}
+.archive-works__works-card-list {
+  margin-top: rem(24);
+}
+
+.archive-works__pagenavi {
+  font-size: rem(16);
+  text-align: center;
+  margin-top: rem(24);
+}

@@ -1,0 +1,18 @@
+@use "global" as *;
+
+/* tag
+------------------------------------------------------ */
+.tag {
+  display: inline-block;
+  min-width: 92px;
+  padding: 4px 10px;
+  font-size: 12px;
+  line-height: 1;
+  text-align: center;
+  border: 1px solid $white;
+  &--new {
+    background: red;
+    color: $white;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,123 @@
+@use "global" as *;
+
+/* works */
+.works {
+}
+
+.works__inner {
+  padding-top: rem(118);
+
+  @include mq("md") {
+    padding-top: rem(205);
+  }
+}
+
+.works__header {
+  margin-bottom: rem(67);
+  
+  @include mq("md") {
+    margin-bottom: initial;
+  }
+}
+
+.works__header-subtitle {
+  margin-top: rem(-65);
+
+  @include mq("md") {
+    margin-top: rem(-59);
+  }
+}
+
+.works__body {
+  padding: rem(0) rem(0);
+
+  @include mq("md") {
+    margin: 0 auto;
+    padding: rem(60) 0;
+    background: linear-gradient(90deg, transparent 0%, transparent 30%, #333333 30%, #333333 100%);
+    z-index: 1;
+    position: relative;
+  }
+}
+
+.works__cont {
+
+  @include mq("md") {
+    display: flex;
+    align-items: center;
+    max-width: rem(1140);
+    margin: 0 auto;
+    padding-left: rem(20);
+    padding-right: rem(20);
+  }
+}
+
+.works__swiper {
+  width: 100%;
+  background-color: transparent;
+
+  @include mq("md") {
+    max-width: rem(557);
+    margin-right: rem(32);
+  }
+}
+
+.works__desc {
+  background-color: #333;
+  padding-top: rem(21);
+  margin-top: rem(-75);
+  padding-bottom: rem(19);
+  padding-left: rem(20);
+  padding-right: rem(20);
+  
+  @include mq("md") {
+    flex: 1;
+    padding-bottom: 0;
+    padding-left: rem(0);
+    margin-top: 0;
+    padding-right: rem(0);
+    padding-top: 0;
+  }
+}
+
+.works__desc-inner {
+  max-width: rem(600);
+  margin: 0 auto;
+}
+
+.works__main-title {
+  color: #fff;
+  font-size: rem(20);
+  letter-spacing: rem(2);
+  margin-bottom: rem(24);
+  text-align: center;
+
+  @include mq("md") {
+    font-size: rem(25);
+    line-height: rem(25);
+    letter-spacing: rem(0.5);
+    margin-bottom: rem(42);
+    text-align: left;
+  }
+}
+
+.works__text {
+  font-size: rem(16);
+  color:#fff;
+  line-height: rem(23);
+  letter-spacing: rem(2);
+  margin-bottom: rem(26);
+  
+  @include mq("md") {
+    line-height: rem(35);
+    letter-spacing: rem(0.5);
+    margin-bottom: rem(48);
+  }
+}
+
+.works__btn {
+  font-size: rem(16);
+  line-height: 1;
+
+}
+

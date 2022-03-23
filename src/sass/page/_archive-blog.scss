@@ -1,0 +1,36 @@
+@use "global" as *;
+
+.archive-blog {
+  background-color: #111;
+}
+
+.archive-blog__mv {
+  background-image: url(../images/blog/archive-blog-mv.jpg);
+  background-size: cover; 
+  background-position: center center;
+  background-repeat: no-repeat;
+  
+  @include mq("md") {
+    background-image: url(../images/blog/archive-blog-mv-PC.jpg);
+  }
+}
+
+.archive-blog__inner {
+
+}
+.archive-blog__breadcrumbs {
+  margin-top: rem(24);
+}
+
+.archive-blog__category-tabs {
+  margin-top: rem(24);
+}
+.archive-blog__blog-card-list {
+  margin-top: rem(24);
+}
+
+.archive-blog__pagenavi {
+  font-size: rem(16);
+  text-align: center;
+  margin-top: rem(24);
+}

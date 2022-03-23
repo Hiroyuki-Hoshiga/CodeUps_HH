@@ -1,0 +1,19 @@
+@use "global" as *;
+
+.page-content-medias {
+
+}
+
+.page-content-medias__item {
+
+  @include mq("md") {
+    align-items: flex-start;
+  }
+}
+
+.page-content-medias__item + .page-content-medias__item {
+  margin-top: rem(104);
+
+  @include mq("md") {
+  }
+}

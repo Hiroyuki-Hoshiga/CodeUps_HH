@@ -1,0 +1,154 @@
+@use "global" as *;
+
+.btn {
+  display: inline-block;
+  letter-spacing: rem(2);
+  background: #333333;
+  border: 1px solid #fff;
+  font-size: rem(20);
+  text-align: center;
+  width: 100%;
+  line-height: rem(50);
+  color: #fff;
+  
+  @include mq("md") {
+    width: rem(360);
+    font-size: rem(16);
+    line-height: rem(60);
+  }
+}
+
+.btn-effect{
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-effect:hover{
+  color: #000;
+  transition: all .3s ease-in;/* rev01 */
+}
+
+.btn-effect::before{
+  background:#fff;
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 0px;
+  height: 100%;
+  width: 0;
+  transform: skewX(0deg);
+  z-index: -1;
+  transition: all .3s ease-in;
+}
+
+.btn-effect:hover::before{
+  width: 110%;
+  transition: all .3s ease-in;
+  z-index: -1;
+
+  @include mq("md") {
+    width: 110%;
+  }
+}
+
+.btn-news {
+  display: inline-block;
+  width: 100%;
+  background: $black;
+  border: 1px solid $white;
+  text-align: center;
+  color: $white;
+  font-size: rem(20);
+  letter-spacing: rem(2);
+  line-height: rem(50);
+
+  @include mq("md") {
+    border: none;
+    background-color: $white;
+    color: #000;
+    width: rem(134);
+    font-size: rem(16);
+    line-height: rem(30);
+    letter-spacing: rem(0);
+  }
+}
+
+.btn-news-effect{
+  position: relative;
+  overflow: hidden;
+}
+.btn-news-effect::before{
+  background:#333;
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 0px;
+  height: 100%;
+  width: 0;
+  transform: skewX(0deg);
+  transition: all .3s ease-in;
+  z-index: -1;
+}
+.btn-news-effect:hover{
+  color: #000;
+  transition: all .3s ease-in;/* rev01 */
+
+  @include mq("md") {
+    color: #fff;
+  }
+}
+
+.btn-news-effect:hover::before{
+  width: 110%;
+  transition: all .3s ease-in;
+  z-index: -1;
+}
+
+.btn-header {
+  display: inline-block;
+  letter-spacing: rem(2);
+  text-align: center;
+  background: #fff;
+  line-height: rem(50);
+  padding-left: rem(32);
+  padding-right: rem(30);
+  color: #333;
+  font-size: rem(16);
+  align-items: center;
+}
+
+.btn-header-effect{
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-header-effect::before{
+  background:#333;
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 0px;
+  height: 100%;
+  width: 0;
+  transform: skewX(0deg);
+  z-index: -1;
+  transition: all .3s ease-in;
+}
+
+.btn-header-effect:hover{
+  color: #fff;
+  transition: all .3s ease-in;
+}
+
+.btn-header-effect:hover::before{
+  width: 110%;
+  transition: all .3s ease-in;
+  z-index: -1;
+}
+
+.btn--contact {
+  @include mq("md") {
+    font-size: rem(20);
+    padding-right: rem(12);
+  }
+}

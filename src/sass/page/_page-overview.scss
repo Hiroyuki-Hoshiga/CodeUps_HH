@@ -1,0 +1,27 @@
+@use "global" as *;
+
+.page-overview {
+}
+
+.page-overview__mv {
+  background-image: url(../images/overview/page-overview-mv.jpg);
+  background-size: cover; 
+  background-position: center center;
+  background-repeat: no-repeat;
+  
+  @include mq("md") {
+    background-image: url(../images/overview/page-overview-mv-PC.jpg);
+  }
+}
+
+.page-overview__inner {
+  padding-bottom: rem(50);
+}
+
+.page-overview__breadcrumbs {
+  margin-top: rem(24);
+}
+
+.page-overview__table {
+  margin-top: rem(24);
+}

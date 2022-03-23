@@ -1,0 +1,31 @@
+@use "global" as *;
+
+.archive-news {
+  background-color: #111;
+}
+
+.archive-news__mv {
+  background-image: url(../images/news/archive-news-mv.jpg);
+  background-size: cover; 
+  background-position: center center;
+  background-repeat: no-repeat;
+  
+  @include mq("md") {
+    background-image: url(../images/news/archive-news-mv-PC.jpg);
+  }
+}
+
+.archive-news__inner {
+padding-bottom: 500px;
+}
+.archive-news__breadcrumbs {
+  margin-top: rem(24);
+}
+.archive-news__news {
+  margin-top: rem(24);
+}
+.archive-news__pagenavi {
+  font-size: rem(16);
+  text-align: center;
+  margin-top: rem(24);
+}

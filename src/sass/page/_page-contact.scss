@@ -1,0 +1,23 @@
+@use "global" as *;
+
+.page-contact {
+}
+
+.page-contact__mv {
+  background-image: url(../images/contact/page-contact-mv.jpg);
+  background-size: cover; 
+  background-position: center center;
+  background-repeat: no-repeat;
+  
+  @include mq("md") {
+    background-image: url(../images/contact/page-contact-mv-PC.jpg);
+  }
+}
+
+.page-contact__inner {
+  padding-bottom: rem(50);
+}
+
+.page-contact__breadcrumbs {
+  margin-top: rem(24);
+}
