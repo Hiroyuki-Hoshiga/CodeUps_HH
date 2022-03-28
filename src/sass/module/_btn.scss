@@ -2,19 +2,27 @@
 
 .btn {
   display: inline-block;
-  letter-spacing: rem(2);
-  background: #333333;
-  border: 1px solid #fff;
-  font-size: rem(20);
-  text-align: center;
   width: 100%;
-  line-height: rem(50);
-  color: #fff;
+  color: $white;
+  font-size: rem(20);
+  letter-spacing: rem(2);
+  line-height: 1;
+  padding: rem(14) rem(14);
+  background: #333333;
+  border: 1px solid $white;
+  text-align: center;
   
   @include mq("md") {
     width: rem(360);
     font-size: rem(16);
-    line-height: rem(60);
+  }
+}
+.btn.-news {
+
+  @include mq("md") {
+    font-size: rem(14);
+    padding: rem(8) rem(22);
+    margin-left: rem(25); 
   }
 }
 
@@ -25,7 +33,7 @@
 
 .btn-effect:hover{
   color: #000;
-  transition: all .3s ease-in;/* rev01 */
+  transition: all .3s ease-in;
 }
 
 .btn-effect::before{
@@ -91,7 +99,7 @@
 }
 .btn-news-effect:hover{
   color: #000;
-  transition: all .3s ease-in;/* rev01 */
+  transition: all .3s ease-in;
 
   @include mq("md") {
     color: #fff;

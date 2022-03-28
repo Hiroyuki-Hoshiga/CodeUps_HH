@@ -1,11 +1,10 @@
 @use "global" as *;
 
 /* overview */
-.overview {
-}
 
 .overview__inner {
-  padding-top: rem(120);
+  padding-top: rem(70);
+  padding-bottom: rem(50);
   
   @include mq("md") {
     padding-top: rem(204);
@@ -20,16 +19,7 @@
   }
 }
 
-.overview__header-subtitle {
-  margin-top: rem(-63);
-  
-  @include mq("md") {
-    margin-top: rem(-59);
-  }
-}
-
 .overview__body {
-  padding: rem(0) rem(0);
 
   @include mq("md") {
     margin: 0 auto;
@@ -62,18 +52,18 @@
 }
 
 .overview__desc {
-  padding-top: rem(37);
-  padding-bottom: rem(21);
+  background-color: #333;
+  padding-top: rem(25);
+  padding-bottom: rem(20);
   padding-left: rem(20);
   padding-right: rem(20);
-  background-color: #333;
 
   @include mq("md") {
     flex: 1;
     padding-top: 0;
     padding-bottom: 0;
-    padding-left: (0);
-    padding-right: rem(1);
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -86,14 +76,13 @@
   text-align: center;
   color: #fff;
   font-size: rem(20);
-  line-height: rem(2);
+  line-height: 1.5;
   letter-spacing: rem(2);
-  margin-bottom: rem(37);
+  margin-bottom: rem(25);
 
   @include mq("md") {
     text-align: left;
     font-size: rem(25);
-    line-height: rem(25);
     letter-spacing: rem(0.5);
     margin-bottom: rem(44);
   }
@@ -102,9 +91,9 @@
 .overview__text {
   color: #fff;
   font-size: rem(16);
-  line-height: rem(23);
+  line-height: calc(23/16);
   letter-spacing: rem(2);
-  margin-bottom: rem(7);
+  margin-bottom: rem(25);
   
   @include mq("md") {
     margin-bottom: rem(38);
@@ -114,5 +103,5 @@
 }
 
 .overview__btn {
-  margin-bottom: rem(-18);
+  line-height: 1;
 }

@@ -25,15 +25,11 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
   //ドロワーメニュー
   $("#MenuButton").click(function () {
-    // $(".l-drawer-menu").toggleClass("is-show");
-    // $(".p-drawer-menu").toggleClass("is-show");
     $(".js-drawer-open").toggleClass("open");
     $(".drawer-menu").toggleClass("open");
     $("html").toggleClass("is-fixed");
 
   });
-
-
 
   // スムーススクロール (絶対パスのリンク先が現在のページであった場合でも作動)
 
@@ -50,9 +46,45 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 });
 
 
+/* header-scroll */
+
+var _window = $(window),
+    _header = $('.header'),
+    mvBottom;
+
+_window.on('scroll', function () {
+  mvBottom = $('.mv').height();
+
+  if (_window.scrollTop() > mvBottom) {
+    _header.addClass('header-scroll');
+  } else {
+    _header.removeClass('header-scroll');
+  }
+});
+
+_window.trigger('scroll');
+
+/* page-top */
+
+var _window = $(window),
+    _backbutton = $('.back-button'),
+    mvBottom;
+
+_window.on('scroll', function () {
+  mvBottom = $('.mv').height();
+
+  if (_window.scrollTop() > mvBottom) {
+    _backbutton.addClass('active');
+  } else {
+    _backbutton.removeClass('active');
+  }
+});
+
+_window.trigger('scroll');
 
 
 
+/* swiper */
 
 var slider1 = new Swiper('.slider1', {
   loop: true,
@@ -67,7 +99,6 @@ var slider1 = new Swiper('.slider1', {
     prevEl: '.swiper-slider1-button-prev',
   }
 })
-
 
 var slider2 = new Swiper('.slider2', {
   loop: true,
@@ -105,6 +136,12 @@ var thumbs = new Swiper ('.gallery-thumbs', {
   centeredSlides: false,
   loop: true,
   slideToClickedSlide: true,
+  breakpoints: {
+    // 768px以上の場合
+    768: {
+      centeredSlides: true,
+    }
+  }
 });
 
 //4系～

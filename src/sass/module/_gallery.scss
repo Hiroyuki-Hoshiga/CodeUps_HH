@@ -30,10 +30,14 @@
       padding: 0;
       overflow: hidden;
       .swiper-slide {
-          width: 93px;
-          height: 93px;
-          text-align: center;
-          overflow: hidden;
+        width: 163px;
+        height: 163px;
+        text-align: center;
+        overflow: hidden;
+        @include mq("md") {
+            width: 93px;
+            height: 93px;
+          }
           
           &-active {
             opacity: 1;

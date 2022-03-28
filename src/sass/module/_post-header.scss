@@ -11,15 +11,26 @@
       margin-top: 40px !important;
     }
   }
+  padding-top: rem(40);
+  padding-bottom: rem(20);
 }
+
 .post-header__meta {
-  .tag {
+  display: flex;
+  margin-top: rem(30);
+  .tags {
+    display: inline-block;
     margin-left: 30px;
+    font-size: rem(16);
+    padding: rem(5),rem(10);
+    border: 1px solid $white;
   }
 }
+
 .post-header__title {
-  border-bottom: 1px dashed;
-  font-size: 26px;
+  font-size: rem(20);
+  line-height: calc(35/20);
+  font-weight: $normal;
   @include mq("md") {
     font-size: 36px;
   }

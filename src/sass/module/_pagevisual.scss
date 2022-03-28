@@ -1,9 +1,5 @@
 @use "global" as *;
 
-.pagevisual {
-
-}
-
 .pagevisual__inner {
   position: relative;
   width: 100%;
@@ -32,11 +28,9 @@
 }
 
 .pagevisual__title {
-  color: #fff;
-  font-size: rem(28);
-  line-height: rem(28);
-  letter-spacing: rem(0.5);
-  margin-bottom: rem(23);
+  color: $white;
+  font-size: rem(30);
+  letter-spacing: rem(2);
   text-shadow: 2px 2px 8px #000;
 
   @include mq("md") {

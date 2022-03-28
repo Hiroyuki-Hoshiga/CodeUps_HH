@@ -1,95 +1,37 @@
 @use "global" as *;
 
-
-/* バンドル */
-/* .slider1 .swiper-slider1-button-prev,
-.slider1 .swiper-slider1-button-next {
-  position: absolute;
-  top: 50%;
-  z-index: 10;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-  width: 50px;
-  height: 50px;
-  background-color: #be2c2c;
-  transition: .3s;
-} */
-
-/* .slider1 .swiper-slider1-button-next {
-  right:0;
-}
-
-.slider1 .swiper-slider1-button-prev:hover,
-.slider1 .swiper-slider1-button-next:hover {
-  background-color: #fff;
-}
-
-.slider1 .swiper-slider1-button-prev:after,
-.slider1 .swiper-slider1-button-next:after {
-  content: "";
-  display: block;
-  position: relative;
-  width: 14px;
-  height: 14px; 
-  border-top: solid 2px #fff;
-  border-right: solid 2px #fff; 
-  transform: rotate(225deg);
-  transition: .5s;
-}
-
-.slider1 .swiper-slider1-button-prev:hover:after,
-.slider1 .swiper-slider1-button-next:hover:after {
-
-  border-top: solid 2px #be2c2c;
-  border-right: solid 2px #be2c2c; 
-  transform: rotate(225deg);
-}
-
-.slider1 .swiper-slider1-button-next:after {
-  transform: rotate(45deg);
-}
-
-.slider1 .swiper-slider1-button-next:hover:after {
-  transform: rotate(45deg);
-} */
-
-.swiper-slider1-container {
-  width: 100%;
-  height: 100vh;
-  background:#fff;
-  margin-bottom: 200px;
-}
-/* バンドル終わり */
-
-/* スタイル */
 .slider1-img01 {
-  background-image: url(../images/common/mv-pc_01.jpg);
+  background-image: url(../images/common/mv_01.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  @include mq("md") {
+    background-image: url('../images/common/mv-pc_01.jpg');
+  }
 }
 
 .slider1-img02 {
-  background-image: url(../images/common/mv-pc_02.jpg);
+  background-image: url(../images/common/mv_02.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  @include mq("md") {
+    background-image: url('../images/common/mv-pc_02.jpg');
+  }
 }
 
 .slider1-img03 {
-  background-image: url(../images/common/mv-pc_03.jpg);
+  background-image: url(../images/common/mv_03.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  @include mq("md") {
+    background-image: url('../images/common/mv-pc_03.jpg');
+  }
 }
-/* スタイル終わり */
-
 
 /* アニメーション */
 @keyframes zoomUp {
@@ -106,10 +48,3 @@
 .swiper-slide-prev .slide-img{
   animation: zoomUp 12s linear 0s 1 normal both;  
 }
-
-/* .swiper-slide {
-  overflow: hidden;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-} */
-/* ./アニメーション */

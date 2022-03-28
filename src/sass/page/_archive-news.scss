@@ -16,16 +16,18 @@
 }
 
 .archive-news__inner {
-padding-bottom: 500px;
+  padding-bottom: rem(120);
 }
+
 .archive-news__breadcrumbs {
-  margin-top: rem(24);
 }
+
 .archive-news__news {
-  margin-top: rem(24);
+  margin-top: rem(72);
 }
+
 .archive-news__pagenavi {
   font-size: rem(16);
   text-align: center;
-  margin-top: rem(24);
+  margin-top: rem(80);
 }

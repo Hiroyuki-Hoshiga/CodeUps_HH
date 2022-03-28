@@ -12,7 +12,7 @@
         <div class="pagevisual__inner">
           <div class="pagevisual__copy">
             <h1 class="pagevisual__title">
-              <?php the_archive_title( '<h1 class="archive-title default-max-width">', '</h1>' ); ?>
+              <?php the_archive_title(); ?>
             </h1>
           </div>
         </div>

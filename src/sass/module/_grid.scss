@@ -1,0 +1,40 @@
+@use "global" as *;
+
+/* grid
+------------------------------------------------------ */
+/*IE11非対応案件なのでgridレイアウトを採用*/
+.grid {
+  display: grid;
+  gap: 20px;
+  @include mq("sm")  {
+    &.pd-card-list {
+      gap: 40px 20px; //商品カード一覧の場合のみ
+    }
+  }
+}
+
+/*PC3カラム*/
+.grid--pc3col {
+  @include mq("sm"){
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @include mq("sm"){
+    grid-template-columns: repeat(2,1fr);
+  }
+  @include mq("md") {
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+/*PC2カラム*/
+.grid--pc2col {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  @include mq("md") {
+    max-width: none;
+    grid-template-columns: repeat(2,1fr);
+  }
+}

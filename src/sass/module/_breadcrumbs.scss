@@ -1,0 +1,12 @@
+@use "global" as *;
+
+.breadcrumbs {
+  font-size: rem(16);
+  color: $white;
+  line-height: 1.5;
+  padding-top: rem(12);
+  padding-bottom: rem(12);
+  letter-spacing: rem(1);
+ 
+}
+

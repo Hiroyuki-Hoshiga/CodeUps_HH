@@ -20,6 +20,7 @@
     max-width: calc(100% / 3 - 3.125rem / 3);
   }
 }
+
 .blog-card-list__item + .blog-card-list__item 
 {
   margin-top: rem(25);
@@ -28,12 +29,14 @@
     margin-left: rem(25);
   }
 }
+
 .blog-card-list__item:nth-child(3n + 1) {
 
   @include mq("md") {
     margin-left: initial;
   }
 }
+
 .blog-card-list__item:nth-child(n + 4) {
   
   @include mq("md") {

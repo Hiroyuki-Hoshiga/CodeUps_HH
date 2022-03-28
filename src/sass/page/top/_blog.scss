@@ -1,13 +1,10 @@
 @use "global" as *;
 
 /* blog */
-.blog {
-  
-}
 
 .blog__inner {
-  padding-top: rem(97);
-  padding-bottom: rem(114);
+  padding-top: rem(70);
+  padding-bottom: rem(120);
 
   @include mq("md") {
     padding-top: rem(215);
@@ -16,18 +13,10 @@
 }
 
 .blog__header {
-  margin-bottom: rem(85);
+  margin-bottom: rem(65);
 
   @include mq("md") {
     margin-bottom: initial;
-  }
-}
-
-.blog__header-subtitle {
-  margin-top: rem(-67);
-
-  @include mq("md") {
-    margin-top: rem(-68);
   }
 }
 
@@ -36,11 +25,7 @@
 }
 
 .blog__btn {
-  text-align: center;
-  font-size: rem(16);
-  margin-top: rem(-1);
-  margin-left: rem(20);
-  margin-right: rem(20);
+  margin-top: rem(25);
   
   @include mq("md") {
     margin-top: rem(23);

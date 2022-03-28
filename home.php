@@ -27,10 +27,8 @@
         </div><!-- breadcrumbs -->
         <!-- category-tabs -->
         <ul class="archive-blog__category-tabs category-tabs">
-          <li class="cat-item <?php if ( is_home () ) {
-          echo 'current-cat';} ?>">
-            <a href="<?php bloginfo('url'); ?>/blog">ALL</a>
-          </li>
+        <li class="cat-item <?php if ( is_home () ) {
+          echo 'current-cat';} ?>"><a href="<?php bloginfo('url'); ?>/blog">ALL</a></li>
           <?php wp_list_categories('orderby=id&title_li=&use_desc_for_title=0&child_of=152'); ?>
         </ul><!-- ./category-tabs -->
         <!-- blog-card-list -->
@@ -46,7 +44,12 @@
               <div class="blog-card__text"><?php the_excerpt(); ?></div>
             </div>
             <div class="blog-card__info">
-              <span class="blog-card__category"><?php the_category( ' ' ); ?></span>
+              <?php
+                $cat = get_the_category();
+                $catname = $cat[0]->cat_name;//カテゴリー名
+                $catslug = $cat[0]->slug;// スラッグ名
+              ?>
+              <span class="blog-card__category <?php echo $catslug; ?>"><?php echo $catname; ?></span>
               <time class="blog-card__date" datetime="<?php the_time( 'Y.m.d' ); ?>"><?php the_time( 'Y.m.d' ); ?></time>
             </div>
           </a><!-- ./blog-card -->

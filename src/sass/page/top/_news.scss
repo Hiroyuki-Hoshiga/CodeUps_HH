@@ -1,11 +1,10 @@
 @use "global" as *;
 
 /* news */
-.news {
-}
 
 .news__inner {
-  padding-top: rem(85);
+  padding-top: rem(25);
+  padding-bottom: rem(50);
   max-width: 1050px;
   margin: 0 auto;
 }
@@ -36,10 +35,6 @@
   text-decoration: underline;
 }
 
-.news__info {
-
-}
-
 .news__date,
 .news__category {
   display: inline-block;
@@ -52,13 +47,13 @@
 
 .news__category {
   font-size: rem(14);
-  padding: rem(8) rem(22);
+  padding: rem(7.5) rem(20);
   border: 1px solid $white;
-  margin-left: rem(29);
+  margin-left: rem(26);
 }
 
 .news__block {
-  margin-top: rem(16);
+  margin-top: rem(14);
   @include mq("md") {
     flex: 1;
     margin-top: initial;
@@ -69,11 +64,8 @@
 
 .news__text {
   font-size: rem(16);
-  line-height: (23/16);
+  line-height: 1.5;
   color: $white;
-  @include mq("md") {
-    line-height: 1.5;
-  }
 }
 
 .news__text:hover {
@@ -83,19 +75,9 @@
 .news__news-btn {
   color: $white;
   text-align: center;
-  margin-top: rem(50);
+  margin-top: rem(25);
   @include mq("md") {
     text-align: left;
     margin-top: initial;
-  }
-}
-.news-btn {
-  display: inline-block;
-  line-height: 1;
-  font-size: rem(14);
-  padding: rem(8) rem(22);
-  border: 1px solid $white;
-  @include mq("md") {
-    margin-left: rem(25); 
   }
 }

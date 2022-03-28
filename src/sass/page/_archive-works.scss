@@ -16,17 +16,28 @@
 }
 
 .archive-works__inner {
-
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: rem(120);
+  @include mq("md") {
+    max-width: $inner + strip-unit($padding-pc) * 2;
+    padding-right: $padding-pc;
+    padding-left: $padding-pc;
+  }
 }
+
 .archive-works__breadcrumbs {
-  margin-top: rem(24);
 }
 
 .archive-works__category-tabs {
-  margin-top: rem(24);
+  margin-top: rem(70);
 }
-.archive-works__works-card-list {
-  margin-top: rem(24);
+
+.archive-works__card-list {
+  margin-top: rem(15);
 }
 
 .archive-works__pagenavi {

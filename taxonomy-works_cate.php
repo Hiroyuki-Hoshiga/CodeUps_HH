@@ -16,21 +16,22 @@
             </h1>
           </div>
         </div>
-      </div><!-- pagevisual -->
-      <!-- inner -->
-      <div class="archive-works__inner inner">
-        <!-- breadcrumbs -->
-        <div class="archive-works__breadcrumbs breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
-          <?php if(function_exists('bcn_display'))
+      </div><!--./ pagevisual -->
+      <!-- breadcrumbs -->
+      <div class="archive-works__breadcrumbs breadcrumbs inner" typeof="BreadcrumbList" vocab="https://schema.org/">
+        <?php if(function_exists('bcn_display'))
           {
             bcn_display();
           }?>
-        </div><!-- breadcrumbs -->
+        </div><!-- ./breadcrumbs -->
         <!-- category-tabs -->
-        <ul class="archive-works__category-tabs category-tabs">
-          <li><a href="<?php bloginfo('url'); ?>/works">ALL</a></li>
+        <ul class="archive-works__category-tabs category-tabs inner">
+          <li class="cat-item <?php if ( is_post_type_archive ('works') ) {
+            echo 'current-cat';} ?>"><a href="<?php bloginfo('url'); ?>/works">ALL</a></li>
           <?php wp_list_categories( 'taxonomy=works_cate&title_li='); ?>
         </ul><!-- ./category-tabs -->
+        <!-- inner -->
+        <div class="archive-works__inner">
         <!-- works-card-list -->
         <div class="archive-works__works-card-list works-card-list">
           <?php if (have_posts()): while(have_posts()): the_post(); ?>

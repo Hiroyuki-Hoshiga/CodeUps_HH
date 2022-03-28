@@ -7,24 +7,16 @@
   color: $white;
   align-items: center;
   list-style: none;
+  letter-spacing: rem(2);
 }
 
-.category-tabs a {
+.category-tabs .cat-item {
   display: block;
   margin-right: rem(16);
-  padding: rem(4) rem(8);
+  padding: rem(3) rem(8);
 }
 
-/* アクティブなタブ */
-.category-tabs__tab--active {
-  background:#fff;/*背景色*/
-  color: #333;
-  padding: rem(8) rem(8);
-}
-
-
-.category-list .current-cat {
+.category-tabs .cat-item.current-cat {
   background: #fff;
   color: #111;
-  padding: rem(8) rem(8);
 }

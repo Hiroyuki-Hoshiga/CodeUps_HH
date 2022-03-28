@@ -15,11 +15,12 @@
   color: rgba(249, 248, 113,0.2);
   font-family:'Noto Serif JP';
   font-size: rem(50);
-  letter-spacing: 0.025em;
+  letter-spacing: rem(2);
   text-transform: capitalize;
   font-weight: $normal;
   line-height: 0.9;
   text-align: center;
+  margin-top: rem(-65);
 
   @include mq("md") {
     font-size: rem(110);

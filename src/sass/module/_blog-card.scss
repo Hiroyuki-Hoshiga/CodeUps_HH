@@ -29,7 +29,7 @@
 }
 
 .blog-card__body {
-  padding: rem(4) rem(24) rem(15);
+  padding: rem(4) rem(20) rem(6);
 }
 
 
@@ -43,11 +43,6 @@
 .blog-card__title {
   font-size: rem(18);
   line-height: (35 /18);
-  margin-bottom: rem(3);
-  
-  @include mq("md") {
-    margin-bottom: rem(5);
-  }
 }
 
 .blog-card__text,
@@ -57,23 +52,28 @@
   line-height: (26 /14);
 }
 
-.blog-card__info,
-.blog-card__text {
-  padding-top: rem(4);
+.blog-card__info {
   margin-top: auto;
+  padding-left: rem(20);
+  padding-right: rem(20);
+  padding-bottom: rem(16);
 }
+
+.blog-card__text {
+  margin-top: rem(2);
+}
+
 
 .blog-card__info {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: rem(4) rem(24) rem(15);
 }
 
 .blog-card__category {
   color: #000;
   line-height: 1;
-  padding: rem(6) rem(5);
+  padding: rem(5) rem(4);
   background-color: #FFEA2E;
 }
 

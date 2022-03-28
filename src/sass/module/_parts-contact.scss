@@ -1,0 +1,37 @@
+@use "global" as *;
+
+/* contact */
+.parts-contact {
+  position: relative;
+  background-color: #3D3D3D;
+}
+
+.parts-contact__inner {
+  padding-top: rem(70);
+  padding-bottom: rem(60);
+
+  @include mq("md") {
+    padding-top: rem(149);
+    padding-bottom: rem(125);
+  }
+}
+  
+.parts-contact__header {
+  margin-bottom: rem(38);
+  
+  @include mq("md") {
+    margin-bottom: 0;
+    }
+}
+
+.parts-contact__text {
+  color: #fff;
+  font-size: rem(16);
+  line-height: calc(23/16);
+  letter-spacing: rem(2);
+}
+
+.parts-contact__btn {
+  margin-top: rem(46);
+  line-height: 1;
+}

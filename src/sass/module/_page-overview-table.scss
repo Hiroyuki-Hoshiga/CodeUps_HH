@@ -12,10 +12,12 @@
 .page-overview-table__team {
   font-size: rem(13);
   color: #fff;
-  padding-top: rem(11);
-  padding-bottom: rem(11);
+  line-height: calc(24/13);
+  padding-top: rem(15);
+  padding-bottom: rem(15);
+  padding-left: rem(5);
   border-bottom: #fff 1px solid;
-  width: 20%;
+  width: 33%;
   
   @include mq("md") {
     width: 12%;
@@ -26,12 +28,13 @@
 .page-overview-table__description {
   font-size: rem(13);
   letter-spacing: rem(0);
-  line-height: 1.5;
+  line-height: calc(24/13);
   color: #fff;
-  padding-top: rem(11);
-  padding-bottom: rem(24);
+  padding-left: rem(5);
+  padding-top: rem(15);
+  padding-bottom: rem(15);
   border-bottom: #fff 1px solid;
-  width: 80%;
+  width: 67%;
   
   @include mq("md") {
     line-height: 1.8;

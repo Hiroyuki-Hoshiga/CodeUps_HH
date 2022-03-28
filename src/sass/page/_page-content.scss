@@ -15,18 +15,17 @@
 }
 
 .page-content__inner {
-  padding-bottom: rem(50);
+  padding-bottom: rem(120);
 }
 
 .page-content__breadcrumbs {
-  margin-top: rem(24);
 }
 
 .page-content__header {
-  text-align: center;
-  color: #fff;
+  margin-top: rem(72);
+  color: $white;
   letter-spacing: rem(2);
- 
+  
   @include mq("md") {
     max-width: rem(580);
     margin: 0 auto;
@@ -36,6 +35,9 @@
 
 .page-content__title {
   font-size: rem(20); 
+  letter-spacing: rem(2);
+  font-weight: $normal;
+  text-align: center;
 
   @include mq("md") {
     font-size: rem(25); 
@@ -46,23 +48,24 @@
 .page-content__text {
   color: #fff;
   font-size: rem(16);
-  line-height: rem(23);
+  line-height: 1.44;
   letter-spacing: rem(2);
-  margin-bottom: rem(7);
-  
+  margin-top: rem(22);  
   @include mq("md") {
     line-height: rem(35);
   }
 }
 
 .page-content__medias {
+  margin-top: rem(82);
 
-  @include mq("md") {
-  }
 }
 
 .anchor {
-  display: block;
-  padding-top: 70px;
-  margin-top: -70px;
+
+  @include mq("md") {
+    display: block;
+    padding-top: 70px;
+    margin-top: -70px;
+  }
 }

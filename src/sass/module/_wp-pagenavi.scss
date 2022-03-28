@@ -9,7 +9,7 @@
 .wp-pagenavi a, .wp-pagenavi span {
 	color: $white;
 	border: 1px solid $white;
-	padding: 5px 12px;
+	padding: 0px 7px;
 	margin: 0 8px;
 	white-space: nowrap;
 	-webkit-transition: 0.2s ease-in-out;
@@ -18,6 +18,8 @@
 	transition: 0.2s ease-in-out;
 	text-align: center;
 	text-decoration: none;
+	line-height: 1;
+	font-weight: $normal;
 }
 .wp-pagenavi a:hover{
   color: #FFF;
@@ -28,10 +30,6 @@
   color: $black;
 	background-color: #F9F871;
 	border-color: #F9F871;
-	font-weight: bold;
+	font-weight: $normal;
 }
 
-.wp-pagenavi.-single a {
-  padding: 2px 12px;
-  margin: 0 25px;
-}
