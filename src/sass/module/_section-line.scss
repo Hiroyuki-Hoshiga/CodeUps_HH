@@ -1,0 +1,55 @@
+@use "global" as *;
+
+.section-line1{
+  position: relative;
+  z-index: 0;
+  width: 100vw;
+}
+
+.section-line1::before{
+  position: absolute;
+  content: '';
+  width: 100vw;
+  height: 1px;
+  background: #F9F871;
+  top: 20%;
+  left: 0;
+  /*四角形を傾けます*/
+  transform: skewY(61deg);
+  transform-origin: top left;
+  z-index: -1;
+  
+  @include mq("md") {
+    transform: skewY(45deg);
+    width: 100vw;
+    top: 8%;
+    left: 0;
+  }
+}
+
+.section-line2{
+  width: 100%;
+  position: relative;
+  z-index: 0;
+}
+
+.section-line2::before{
+  position: absolute;
+  content: '';
+  width: 500px;
+  height: 2px;
+  background: #F9F871;
+  top: 0;
+  right: 37%;
+  /*四角形を傾けます*/
+  transform: skewY(-75deg);
+  transform-origin: top right;
+  z-index: -1;
+  
+  @include mq("md") {
+    transform: skewY(-45deg);
+    top: -100px;
+    right: 0;
+    width: 100vw;
+  }
+}

@@ -61,7 +61,7 @@
       </div>
       <?php wp_reset_postdata(); endif; ?>
       <div class="news__news-btn">
-        <a href="<?php bloginfo('url'); ?>/news" class="btn news-btn">すべて見る</a>
+        <a href="<?php bloginfo('url'); ?>/news" class="btn -news news-btn-effect">すべて見る</a>
       </div>
     </div>
   </div>
@@ -183,10 +183,15 @@
           </figure>
           <div class="blog-card__body">
             <h3 class="blog-card__title"><?php the_title(); ?></h3>
-            <div class="blog-card__text">説明文が入ります。説明文が入ります。説明文が入ります。</div>
+            <div class="blog-card__text"><?php the_excerpt(); ?></div>
           </div>
           <div class="blog-card__info">
-            <span class="blog-card__category">カテゴリ</span>
+            <?php
+              $cat = get_the_category();
+              $catname = $cat[0]->cat_name;//カテゴリー名
+              $catslug = $cat[0]->slug;// スラッグ名
+            ?>
+            <span class="blog-card__category"><?php echo $catname; ?></span>
             <time class="blog-card__date" datetime="<?php the_time( 'Y.m.d' ); ?>"><?php the_time( 'Y.m.d' ); ?></time>
           </div>
         </a><!-- ./blog-card -->

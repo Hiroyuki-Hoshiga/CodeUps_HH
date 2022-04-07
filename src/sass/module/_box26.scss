@@ -1,25 +1,25 @@
 @use "global" as *;
 
-.box26 {
+.works-box {
   position: relative;
-  margin: 2em 0;
   padding: 2.5em 1em;
   border: solid 1px $white;
+  margin-top: rem(48);
 }
-.box26 .box-title {
+.works-box__title {
   position: absolute;
   display: inline-block;
   top: -15px;
   left: 20px;
-  padding: 5px 15px;
+  padding: rem(8) rem(15);
   line-height: 1;
   font-size: rem(20);
   color: $white;
   border: solid 1px $white;
-  border-radius: 15px;
+  border-radius: rem(20);
   background-color: $black;
 }
-.box26 p {
+.works-box__title p {
   margin: 0; 
   padding: 0;
 }

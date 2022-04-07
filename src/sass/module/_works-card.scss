@@ -1,9 +1,39 @@
 
 @use "global" as *;
 
+/*----------------------------------------
+card本体
+----------------------------------------*/
+.works-card {
+	display: block;
+	color: inherit;
+	text-decoration: none;
+	position: relative;
+}
+
+.works-card__thumb {
+	position: relative;
+	transition: .3s;
+}
+
+.works-card__thumb::before {
+	content: "";
+	display: block;
+	padding-top: calc((249 / 375) * 100%);
+}
+
+.works-card__thumb img{
+	position: absolute;
+	left: 0;
+	top: 0;
+	max-width: none;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
 
 .works-card__category {
-  position: absolute;
+	position: absolute;
   content: "";
   top: 0;
   right: 0;  
@@ -13,39 +43,6 @@
   line-height: 1;
   padding: rem(12) rem(15);
   background-color: #111111;
-}
-
-
-
-
-
-/*----------------------------------------
-	card本体
-----------------------------------------*/
-.works-card {
-	display: block;
-	color: inherit;
-	text-decoration: none;
-  position: relative;
-
-}
-.works-card__thumb {
-	position: relative;
-	transition: .3s;
-}
-.works-card__thumb::before {
-	content: "";
-	display: block;
-  padding-top: calc((249 / 375) * 100%);
-}
-.works-card__thumb img{
-	position: absolute;
-	left: 0;
-	top: 0;
-	max-width: none;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
 }
 
 .works-card__body {
@@ -60,28 +57,3 @@
   font-weight: $normal;
 }
 
-/*----------------------------------------
-	Card一覧（カード専用レイアウト）
-----------------------------------------*/
-.works-card-list {
-	display: flex;
-	flex-direction: column;
-	margin-top: -20px; /*1行目の上マージンを相殺*/
-}
-.works-card-list__item {
-	margin-top: 20px;
-}
-
-
-@media screen and (min-width: 768px),print {
-	/*PCレイアウトで2カラム表示*/
-	.works-card-list--col2 {
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: space-between;
-	}
-	.works-card-list--col2 .works-card-list__item {
-    width: calc(100% / 2 - 3rem / 2);
-
-	}
-}

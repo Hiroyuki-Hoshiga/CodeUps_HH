@@ -38,7 +38,7 @@
               <?php if (have_posts()): while(have_posts()): the_post(); ?>
               <li class="works-card-list__item">
                 <!-- works-card -->
-                <a href="#" class="works-card">
+                <a href="<?php the_permalink(); ?>" class="works-card">
                   <div class="works-card__thumb"><?php the_post_thumbnail('thumbside'); ?></div>
                   <div class="works-card__body">
                     <h2 class="works-card__title"><?php the_title(); ?></h2>

@@ -46,7 +46,12 @@
               <div class="blog-card__text"><?php the_excerpt(); ?></div>
             </div>
             <div class="blog-card__info">
-              <span class="blog-card__category"><?php the_category( ' ' ); ?></span>
+              <?php
+                $cat = get_the_category();
+                $catname = $cat[0]->cat_name;//カテゴリー名
+                $catslug = $cat[0]->slug;// スラッグ名
+              ?>
+              <span class="blog-card__category <?php echo $catslug; ?>"><?php echo $catname; ?></span>
               <time class="blog-card__date" datetime="<?php the_time( 'Y.m.d' ); ?>"><?php the_time( 'Y.m.d' ); ?></time>
             </div>
           </a><!-- ./blog-card -->

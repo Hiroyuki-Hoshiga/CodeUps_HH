@@ -1,13 +1,14 @@
 @use "global" as *;
 
-.page-overview {
+.single-news {
   
 }
 
-.page-overview__inner {
+.single-news__inner {
+  margin-top: rem(50);
   padding-bottom: rem(50);
 }
 
-.page-overview__breadcrumbs {
+.single-news__breadcrumbs {
   margin-top: rem(24);
 }

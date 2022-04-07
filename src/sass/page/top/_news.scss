@@ -18,7 +18,8 @@
 }
 
 .news__contents {
-  flex: 1;  
+  flex: 1;
+  line-height: 1;
 }
 
 .news__content {
@@ -54,11 +55,12 @@
 
 .news__block {
   margin-top: rem(14);
+  flex: 1;
+  align-items: center;
   @include mq("md") {
-    flex: 1;
     margin-top: initial;
     margin-left: rem(60);
-    padding-top: rem(6);
+    padding-top: rem(3);
   }
 }
 

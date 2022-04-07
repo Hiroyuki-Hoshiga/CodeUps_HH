@@ -30,6 +30,13 @@
   }
 }
 
+.blog-card-list__item:nth-child(n + 4) {
+  
+  @include mq("md") {
+    margin-top: rem(25);
+  }
+}
+
 .blog-card-list__item:nth-child(3n + 1) {
 
   @include mq("md") {
@@ -37,7 +44,23 @@
   }
 }
 
-.blog-card-list__item:nth-child(n + 4) {
+.blog-card-list__item.-col4 {
+  
+  @include mq("md") {
+    max-width: 100%;
+    max-width: calc(100% / 4 - 3.125rem / 4);
+  }
+}
+
+.blog-card-list__item.-col4:nth-child(4n + 1) {
+
+  @include mq("md") {
+    margin-left: initial;
+  }
+}
+
+
+.blog-card-list__item.-col4:nth-child(n + 5) {
   
   @include mq("md") {
     margin-top: rem(25);

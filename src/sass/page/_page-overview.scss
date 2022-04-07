@@ -15,7 +15,7 @@
 }
 
 .page-overview__inner {
-  padding-bottom: rem(50);
+  padding-bottom: rem(150);
 }
 
 .page-overview__breadcrumbs {
@@ -23,4 +23,14 @@
 
 .page-overview__table {
   margin-top: rem(80);
+}
+
+.page-overview__map {
+  margin-top: rem(80);
+  margin-right: calc(50% - 50vw);
+	margin-left: calc(50% - 50vw);
+  @include mq("md") {
+    margin-right: initial;
+    margin-left: initial;
+  }
 }

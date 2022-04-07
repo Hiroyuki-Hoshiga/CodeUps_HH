@@ -18,13 +18,14 @@
 .post-header__meta {
   display: flex;
   margin-top: rem(30);
-  .tags {
-    display: inline-block;
-    margin-left: 30px;
-    font-size: rem(16);
-    padding: rem(5),rem(10);
-    border: 1px solid $white;
-  }
+  align-items: center;
+}
+
+.post-header__meta span{
+  margin-left: rem(30);
+  font-size: rem(16);
+  padding: rem(7.5) rem(20);
+  border: 1px solid $white;
 }
 
 .post-header__title {
@@ -32,6 +33,8 @@
   line-height: calc(35/20);
   font-weight: $normal;
   @include mq("md") {
-    font-size: 36px;
+    font-size: rem(23);
+    line-height: calc(35/23);
+    letter-spacing: rem(0.4);
   }
 }

@@ -1,0 +1,21 @@
+@use "global" as *;
+
+.related-articles {
+  padding-bottom: rem(150);
+}
+
+.related-articles__title {
+  display: inline-block;
+  width: 100%;
+  color: $white;
+  font-size: rem(16);
+  letter-spacing: rem(2);
+  line-height: 1;
+  padding: rem(14) rem(14);
+  background: #333333;
+  border: 1px solid $white;
+  text-align: center;
+}
+.related-articles__items {
+  margin-top: rem(50);
+}

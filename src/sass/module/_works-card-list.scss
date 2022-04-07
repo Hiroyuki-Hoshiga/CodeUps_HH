@@ -1,2 +1,26 @@
 @use "global" as *;
 
+/*----------------------------------------
+	Card一覧（カード専用レイアウト）
+----------------------------------------*/
+.works-card-list {
+	display: flex;
+	flex-direction: column;
+	margin-top: -20px; /*1行目の上マージンを相殺*/
+}
+.works-card-list__item {
+	margin-top: 20px;
+}
+
+@media screen and (min-width: 768px),print {
+	/*PCレイアウトで2カラム表示*/
+	.works-card-list--col2 {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.works-card-list--col2 .works-card-list__item {
+    width: calc(100% / 2 - 3rem / 2);
+
+	}
+}

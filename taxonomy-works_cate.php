@@ -32,23 +32,25 @@
         </ul><!-- ./category-tabs -->
         <!-- inner -->
         <div class="archive-works__inner">
-        <!-- works-card-list -->
-        <div class="archive-works__works-card-list works-card-list">
-          <?php if (have_posts()): while(have_posts()): the_post(); ?>
-          <!-- works-card -->
-          <a class="works-card-list__item works-card" href="<?php the_permalink(); ?>">
-            <figure class="works-card__image">
-              <?php the_post_thumbnail('thumbside'); ?>
-            </figure>
-            <div class="works-card__body">
-              <h3 class="works-card__title"><?php the_title(); ?></h3>
-            </div>
-            <span class="works-card__category">
-              <?php $terms = wp_get_object_terms($post->ID,'works_cate'); foreach($terms as $term){echo $term->name . '';} ?>
-            </span>
-          </a><!-- ./works-card -->
-          <?php endwhile; endif; ?>
-        </div><!-- ./works-card-list -->
+        <div class="archive-works__card-list">
+          <!-- works-card-list -->
+          <ul class="works-card-list works-card-list--col2">
+            <?php if (have_posts()): while(have_posts()): the_post(); ?>
+            <li class="works-card-list__item">
+              <!-- works-card -->
+              <a href="<?php the_permalink(); ?>" class="works-card">
+                <div class="works-card__thumb"><?php the_post_thumbnail('thumbside'); ?></div>
+                <div class="works-card__body">
+                  <h2 class="works-card__title"><?php the_title(); ?></h2>
+                </div>
+                <span class="works-card__category">
+                  <?php $terms = wp_get_object_terms($post->ID,'works_cate'); foreach($terms as $term){echo $term->name . '';} ?>
+                </span>
+              </a><!-- works-card -->
+            </li>
+            <?php endwhile; endif; ?>
+          </ul><!-- works-card-list -->
+        </div>
         <!-- pagenavi -->
         <div class="archive-works__pagenavi">
           <?php wp_pagenavi(); ?>

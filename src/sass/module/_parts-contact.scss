@@ -11,7 +11,7 @@
   padding-bottom: rem(60);
 
   @include mq("md") {
-    padding-top: rem(149);
+    padding-top: rem(150);
     padding-bottom: rem(125);
   }
 }
@@ -24,11 +24,16 @@
     }
 }
 
+.parts-contact__body {
+  text-align: center;
+}
+
 .parts-contact__text {
   color: #fff;
   font-size: rem(16);
   line-height: calc(23/16);
   letter-spacing: rem(2);
+  margin-top: rem(15);
 }
 
 .parts-contact__btn {
