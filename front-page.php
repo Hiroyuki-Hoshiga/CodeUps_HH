@@ -177,7 +177,7 @@
         foreach($infoPosts as $post):
         ?>
         <!-- blog-card -->
-        <a class="blog-card-list__item blog-card" href="<?php the_permalink(); ?>">
+        <a class="blog-card-list__item blog-card new_icon" href="<?php the_permalink(); ?>">
           <figure class="blog-card__image">
             <?php the_post_thumbnail('thumbside'); ?>
           </figure>

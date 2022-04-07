@@ -226,6 +226,9 @@ select::-ms-expand {
   }
 }
 
+.blog-card-list__item {
+  position: relative;
+}
 @media screen and (min-width: 768px) {
   .blog-card-list__item {
     max-width: 100%;
@@ -276,6 +279,32 @@ select::-ms-expand {
   .blog-card-list__item.-col4:nth-child(n+5) {
     margin-top: 1.5625rem;
   }
+}
+
+.new_icon:first-of-type::after {
+  position: absolute;
+  content: "New";
+  top: -16px;
+  top: -1rem;
+  left: -15px;
+  left: -0.9375rem;
+  background: #FFBA6A;
+  color: #333;
+  border-radius: 50%;
+  font-size: 16px;
+  font-size: 1rem;
+  width: 60px;
+  width: 3.75rem;
+  height: 60px;
+  height: 3.75rem;
+  padding: 17px 0;
+  padding: 1.0625rem 0;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 2px;
+  letter-spacing: 0.125rem;
 }
 
 .blog-card {
@@ -374,32 +403,6 @@ select::-ms-expand {
   padding: 5px 4px;
   padding: 0.3125rem 0.25rem;
   background-color: #FFEA2E;
-}
-
-.new_icon:after {
-  position: absolute;
-  content: "New";
-  top: -16px;
-  top: -1rem;
-  left: -15px;
-  left: -0.9375rem;
-  background: #FFBA6A;
-  color: #333;
-  border-radius: 50%;
-  font-size: 16px;
-  font-size: 1rem;
-  width: 60px;
-  width: 3.75rem;
-  height: 60px;
-  height: 3.75rem;
-  padding: 17px 0;
-  padding: 1.0625rem 0;
-  text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  letter-spacing: 2px;
-  letter-spacing: 0.125rem;
 }
 
 .works-box {
@@ -2216,7 +2219,7 @@ html, body {
   width: 500px;
   height: 2px;
   background: #F9F871;
-  top: 0;
+  top: -100px;
   right: 37%;
   /*四角形を傾けます*/
   -webkit-transform: skewY(-75deg);
@@ -3312,6 +3315,7 @@ card本体
     margin-top: 0;
     padding-right: 0rem;
     padding-top: 0;
+    z-index: 1;
   }
 }
 

@@ -76,21 +76,3 @@
   padding: rem(5) rem(4);
   background-color: #FFEA2E;
 }
-
-
-.new_icon:after{
-  position: absolute;
-  content: "New";
-  top: rem(-16);
-  left: rem(-15);
-  background: #FFBA6A;
-  color: #333;
-  border-radius: 50%;
-  font-size: rem(16);
-  width: rem(60);
-  height: rem(60);
-  padding: rem(17) 0;
-  text-align: center;
-  align-items: center;
-  letter-spacing: rem(2);
-}
