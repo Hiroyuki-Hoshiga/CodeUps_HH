@@ -136,7 +136,7 @@
   </section><!-- ./works -->
 
   <!-- overview -->
-  <section class="overview section-line2">
+  <section class="overview">
     <div class="overview__inner">
       <!-- section-header -->
       <div class="overview__header section-header inner">

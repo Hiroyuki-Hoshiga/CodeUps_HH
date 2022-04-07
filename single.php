@@ -26,7 +26,7 @@
         </div><!-- ./post-header -->
         <!-- post-intro -->
         <div class="post-intro">
-          <div class="post-intro__eyecatch"><?php the_post_thumbnail( 'blog' ); ?></div>
+          <div class="post-intro__eyecatch"><?php the_post_thumbnail(' blog ', array('class' => 'post-intro__e')); ?></div>
           <div class="post-intro__excerpt">
             <?php the_excerpt(); ?>
           </div>
